@@ -1,5 +1,7 @@
 require "bataille/version"
+require 'bataille/result'
+require 'bataille/google'
 
 module Bataille
-  # Your code goes here...
 end
+
