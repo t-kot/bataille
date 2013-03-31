@@ -31,6 +31,7 @@ module Bataille
         doc.css('.g').each_with_index.map do |result, i|
           Site.new(
             rank: i+1+start,
+            keyword: word,
             title: result.css('.r').text,
             url: result.css('.kv').search('cite').text,
             description: result.css('.st').text

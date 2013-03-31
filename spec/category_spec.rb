@@ -12,7 +12,7 @@ describe Bataille::Category do
   end
 
   describe '#google_search' do
-    include_context 'make 10 sites response'
+    include_context 'make 10 sites'
     before { stub_response_for(sites) }
     its('google_search') { should have(4).results }
     its('google_search') { should be_instance_of(Bataille::ResultSet) }

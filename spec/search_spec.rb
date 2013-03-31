@@ -3,7 +3,7 @@ require 'spec_helper'
 
 describe Bataille::Search do
 
-  include_context 'make 10 sites response'
+  include_context 'make 10 sites'
 
   before { stub_response_for(sites) }
 
