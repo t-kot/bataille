@@ -6,5 +6,7 @@ require_relative 'bataille/search_result'
 require_relative 'bataille/result_set'
 require_relative 'bataille/analytics'
 
+require 'nokogiri'
+
 module Bataille
 end
