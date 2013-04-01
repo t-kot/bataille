@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Bataille::VERSION
   gem.authors       = ["kotohata"]
   gem.email         = ["t.kotohata@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Bataille is custom web searcher and utility for SEO}
+  gem.summary       = %q{custom web searcher and utilify for SEO}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)

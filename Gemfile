@@ -1,4 +1,9 @@
 source 'https://rubygems.org'
-
-# Specify your gem's dependencies in bataille.gemspec
 gemspec
+
+gem 'nokogiri'
+
+group :test do
+  gem 'webmock'
+  gem 'rspec'
+end

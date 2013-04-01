@@ -1,6 +1,6 @@
 # Bataille
 
-TODO: Write a gem description
+Bataille is smart custom web searcher and analyzer for SEO.
 
 ## Installation
 
@@ -18,7 +18,43 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+
+### Search
+- - -
+
+	results = Bataille::Search.google_search("test") #=> #<Bataille::SearchResult>
+	
+	site = results.first #=> #<Bataille::Site>
+	site.url #=> "test.jp/"
+	site.title #=> "test title"
+	site.description #=> "test description"
+	site.rank #=> 1 //search result page ranking
+	
+or you can specify the number of result, default length is 10
+
+	result = Bataille::Search.google_search("test", 20)
+	result.length # 20
+	
+---
+you can use finder for search result
+
+	results = Bataille::Search.google_search("test")
+	results.where(title: "hoge")
+	results.where(description: "fuga")
+	results.where(url: /com$/)
+	# you can chain finders
+	results.where(title: "hoge").where(url: /com$/)
+	# or
+	results.where({title: "hoge", url: /com$/})
+	
+Bataille::SearchResult#where returns another Bataille::SearchResult instance.
+
+if you want to get the only 1 result, use '#find_by'
+	
+	results.find_by(:url, /com$/) #=> #<Bataille::Site>
+
+
+	
 
 ## Contributing
 

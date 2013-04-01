@@ -7,6 +7,10 @@ module Bataille
       @results, @word = results, word
     end
 
+    def length
+      @results.length
+    end
+
     def each
       @results.each { |r| yield r }
     end

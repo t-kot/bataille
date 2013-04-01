@@ -6,7 +6,7 @@ module Bataille
 
     def initialize(results, category)
       @results = results
-      @category = category
+      @categories= []
     end
 
     def each
